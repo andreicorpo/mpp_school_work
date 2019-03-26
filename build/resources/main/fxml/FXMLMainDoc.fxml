@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="890.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.controllers.FXMLMainDocController">
+   <children>
+      <TableView fx:id="racesTable" layoutX="14.0" layoutY="14.0" prefHeight="371.0" prefWidth="301.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0">
+        <columns>
+          <TableColumn fx:id="raceTableColumn" prefWidth="185.0" text="Race" />
+          <TableColumn fx:id="participantsNumTableColumn" prefWidth="115.0" text="#Participants" />
+        </columns>
+      </TableView>
+      <TextField fx:id="searchTeamTF" layoutX="372.0" layoutY="102.0" prefHeight="26.0" prefWidth="171.0" promptText="Search by team" AnchorPane.leftAnchor="372.0" AnchorPane.topAnchor="102.0" />
+      <Button fx:id="searchTeamBtn" layoutX="427.0" layoutY="149.0" mnemonicParsing="false" onAction="#getParticipantByTeam" text="Search" />
+      <Button fx:id="logoutBtn" layoutX="428.0" layoutY="326.0" mnemonicParsing="false" onAction="#logout" text="Logout" />
+      <TableView fx:id="participantsTable" layoutX="591.0" layoutY="14.0" prefHeight="371.0" prefWidth="285.0" visible="false">
+        <columns>
+          <TableColumn fx:id="participantNameCol" prefWidth="192.0" text="Participant Name" />
+          <TableColumn fx:id="motorCCCol" minWidth="5.0" prefWidth="92.0" text="Motor CC" />
+        </columns>
+      </TableView>
+      <Button fx:id="signUpNewBtn" layoutX="372.0" layoutY="236.0" mnemonicParsing="false" onAction="#signUpParticipant" prefHeight="26.0" prefWidth="171.0" text="Sign Up Participant" />
+      <ChoiceBox fx:id="motorCCChoiceBox" layoutX="659.0" layoutY="102.0" prefHeight="26.0" prefWidth="165.0" AnchorPane.leftAnchor="659.0" AnchorPane.topAnchor="102.0" />
+      <Label fx:id="motorCCLabel" layoutX="659.0" layoutY="79.0" text="Motor Capacity" AnchorPane.leftAnchor="659.0" AnchorPane.topAnchor="79.0" />
+      <Label fx:id="nameLabel" layoutX="659.0" layoutY="150.0" text="Name" AnchorPane.leftAnchor="659.0" AnchorPane.topAnchor="150.0" />
+      <TextField fx:id="participantNameTF" layoutX="659.0" layoutY="175.0" prefHeight="26.0" prefWidth="165.0" promptText="Participant Name" AnchorPane.leftAnchor="659.0" AnchorPane.topAnchor="175.0" />
+      <Button fx:id="signUpBtn" layoutX="703.0" layoutY="326.0" mnemonicParsing="false" onAction="#signUp" text="Sign Up" AnchorPane.leftAnchor="703.0" AnchorPane.topAnchor="326.0" />
+      <Label fx:id="teamLabel" layoutX="659.0" layoutY="228.0" text="Team" AnchorPane.leftAnchor="659.0" AnchorPane.topAnchor="228.0" />
+      <TextField fx:id="teamTF" layoutX="659.0" layoutY="249.0" prefHeight="26.0" prefWidth="165.0" promptText="Team (can be empty)" AnchorPane.leftAnchor="659.0" AnchorPane.topAnchor="249.0" />
+   </children>
+</AnchorPane>

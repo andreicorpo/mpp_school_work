@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="services.StaffServicesTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2019-03-22T10:53:43" hostname="pop-os" time="0.017">
+  <properties/>
+  <testcase name="checkStaff" classname="services.StaffServicesTest" time="0.016"/>
+  <testcase name="save" classname="services.StaffServicesTest" time="0.001"/>
+  <system-out><![CDATA[Properties set. 
+-- listing properties --
+jdbc.url=jdbc:sqlite:src/main/resources/Mpp
+jdbc.driver=org.sqlite.JDBC
+Properties set. 
+-- listing properties --
+jdbc.url=jdbc:sqlite:src/main/resources/Mpp
+jdbc.driver=org.sqlite.JDBC
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

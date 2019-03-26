@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="services.RaceServicesTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-03-22T10:53:43" hostname="pop-os" time="0.003">
+  <properties/>
+  <testcase name="numOfParticipantByRace" classname="services.RaceServicesTest" time="0.003"/>
+  <system-out><![CDATA[Properties set. 
+-- listing properties --
+jdbc.url=jdbc:sqlite:src/main/resources/Mpp
+jdbc.driver=org.sqlite.JDBC
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
