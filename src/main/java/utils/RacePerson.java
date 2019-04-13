@@ -1,39 +1,38 @@
 package utils;
 
-import javafx.beans.property.IntegerProperty;
-import javafx.beans.property.SimpleIntegerProperty;
+import java.io.Serializable;
 
-public class RacePerson {
+public class RacePerson implements Serializable {
 
-    private final IntegerProperty raceMotorCC;
-    private final IntegerProperty numOfParticipants;
+    private Integer raceMotorCC;
+    private Integer numOfParticipants;
 
     public RacePerson(Integer raceMotorCC, Integer numOfParticipants) {
-        this.raceMotorCC = new SimpleIntegerProperty(raceMotorCC);
-        this.numOfParticipants = new SimpleIntegerProperty(numOfParticipants);
+        this.raceMotorCC = raceMotorCC;
+        this.numOfParticipants = numOfParticipants;
     }
 
-    public int getRaceMotorCC() {
-        return raceMotorCC.get();
-    }
-
-    public IntegerProperty raceMotorCCProperty() {
+    public Integer getRaceMotorCC() {
         return raceMotorCC;
     }
 
-    public void setRaceMotorCC(int raceMotorCC) {
-        this.raceMotorCC.set(raceMotorCC);
+    public void setRaceMotorCC(Integer raceMotorCC) {
+        this.raceMotorCC = raceMotorCC;
     }
 
-    public int getNumOfParticipants() {
-        return numOfParticipants.get();
-    }
-
-    public IntegerProperty numOfParticipantsProperty() {
+    public Integer getNumOfParticipants() {
         return numOfParticipants;
     }
 
-    public void setNumOfParticipants(int numOfParticipants) {
-        this.numOfParticipants.set(numOfParticipants);
+    public void setNumOfParticipants(Integer numOfParticipants) {
+        this.numOfParticipants = numOfParticipants;
+    }
+
+    @Override
+    public String toString() {
+        return "RacePerson{" +
+                "raceMotorCC=" + raceMotorCC +
+                ", numOfParticipants=" + numOfParticipants +
+                '}';
     }
 }

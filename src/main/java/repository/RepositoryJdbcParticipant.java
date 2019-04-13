@@ -47,8 +47,8 @@ public class RepositoryJdbcParticipant implements IRepositoryParticipant {
                         if (result.next()) {
                             Integer raceID = result.getInt("RaceID");
                             try(PreparedStatement preStmt2=connection.prepareStatement("insert into RacesParticipants values (?,?)")){
-                                preStmt2.setInt(1,participantSingle.getId());
-                                preStmt2.setInt(2,raceID);
+                                preStmt2.setInt(1, raceID);
+                                preStmt2.setInt(2, participantSingle.getId());
                                 int result2=preStmt2.executeUpdate();
                             }catch (SQLException ex){
                                 logger.error(ex);

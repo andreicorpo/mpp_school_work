@@ -1,6 +1,8 @@
 package model.staff;
 
-public class Staff {
+import java.io.Serializable;
+
+public class Staff implements Serializable {
     private Integer id;
     private String username;
     private String password;

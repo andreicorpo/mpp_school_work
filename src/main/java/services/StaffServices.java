@@ -3,8 +3,6 @@ package services;
 import model.staff.Staff;
 import repository.RepositoryJdbcStaff;
 
-import java.util.stream.StreamSupport;
-
 public class StaffServices {
 
     RepositoryJdbcStaff repo;
@@ -33,8 +31,14 @@ public class StaffServices {
         return repo.findAll();
     }
 
-    public boolean checkStaff(String username, String password) {
-        return StreamSupport.stream(findAll().spliterator(), false).anyMatch(staff -> staff.getUsername().equals(username) && staff.getPassword().equals(password));
+    public Staff checkStaff(String username, String password) {
+        Staff found = null;
+        for (Staff s : findAll()) {
+            if (s.getUsername().equals(username) && s.getPassword().equals(password)) {
+                found = s;
+            }
+        }
+        return found;
     }
 
     public int size() {return repo.size();}

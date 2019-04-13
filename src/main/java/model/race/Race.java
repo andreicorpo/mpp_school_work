@@ -1,6 +1,8 @@
 package model.race;
 
-public class Race {
+import java.io.Serializable;
+
+public class Race implements Serializable {
     private Integer id;
     private Integer motorCC;
 

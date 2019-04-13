@@ -1,6 +1,8 @@
 package model.participant;
 
-public class ParticipantTeam implements  IParticipant{
+import java.io.Serializable;
+
+public class ParticipantTeam implements Serializable, IParticipant {
     private Integer id;
     private String name;
     private Integer motorCC;

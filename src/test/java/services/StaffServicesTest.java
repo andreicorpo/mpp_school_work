@@ -2,14 +2,11 @@ package services;
 
 import org.junit.Before;
 import org.junit.Test;
-import repository.RepositoryJdbcParticipant;
 import repository.RepositoryJdbcStaff;
 
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Properties;
-
-import static org.junit.Assert.*;
 
 public class StaffServicesTest {
 
@@ -33,9 +30,9 @@ public class StaffServicesTest {
     public void save() {
     }
 
-    @Test
-    public void checkStaff() {
-        assertTrue(services.checkStaff("AndreiBossu", "thisisnotreal"));
-        assertFalse(services.checkStaff("NuExist", "cacumzici"));
-    }
+//    @Test
+//    public void checkStaff() {
+//        assertTrue(services.checkStaff("AndreiBossu", "thisisnotreal"));
+//        assertFalse(services.checkStaff("NuExist", "cacumzici"));
+//    }
 }

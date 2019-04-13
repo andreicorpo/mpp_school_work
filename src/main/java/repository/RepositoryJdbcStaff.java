@@ -1,8 +1,6 @@
 package repository;
 
 import model.participant.IParticipant;
-import model.participant.ParticipantSingle;
-import model.participant.ParticipantTeam;
 import model.staff.Staff;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -73,7 +71,7 @@ public class RepositoryJdbcStaff implements IRepositoryStaff{
         List<Staff> staffs = new ArrayList<>();
         try(PreparedStatement preStmt=con.prepareStatement("select * from Staffs")){
             try(ResultSet result=preStmt.executeQuery()) {
-                if (result.next()) {
+                while (result.next()) {
                     Integer id = result.getInt("StaffID");
                     String username = result.getString("Username");
                     String password= result.getString("Password");
